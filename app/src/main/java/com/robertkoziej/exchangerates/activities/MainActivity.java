@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     View detailsFragment;
 
     private AppCompatActivity activityContext;
-    private MainActivityPresenter presenter;
+    public MainActivityPresenter presenter;
 
     private ViewModeStrategy paneMode;
     private TwoPaneMode twoPaneMode = new TwoPaneMode();
@@ -143,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
             updatePaneMode(singlePaneModeDetails);
         else
             updatePaneMode(singlePaneModeList);
+    }
+
+    public ViewModeStrategy getPaneMode() {
+        return paneMode;
     }
 
     @Override
